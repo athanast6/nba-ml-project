@@ -1,0 +1,34 @@
+{% extends 'ppg_predictor/base.html' %}
+{% block content %}
+
+{% load static %}
+
+<br>
+<body>
+<h1>Players Prediction</h1>
+<br>
+
+{% if playername %}
+<p> {{ playername }} projected points 2023: </p>
+{% endif %}
+
+
+
+
+<h2><b> {{ predictedppg }} PPG </b></h2>
+
+<br>
+<br>
+<p> 2022 PPG: {{ ppg2022 }}</p>
+
+<br>
+<br>
+<div>
+<img src = "{% static 'ppg_predictor/2021PostAllStarvs2022PPG.png' %}" width = "500">
+</div>
+<br>
+<br>
+<a href="{% url 'ppgpredictor' %}">Back to Predictor</a>
+
+</body>
+{% endblock %}
