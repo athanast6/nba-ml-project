@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from ppg_predictor.views import ppgpredictor, nbaplayersprediction, home
+from ppg_predictor.views import ppgpredictor, nbaplayersprediction, home, simulationgame, newleague, draft, viewleague, viewteam
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,8 +23,15 @@ urlpatterns = [
     path('',home,name='home'),
     
     path('ppgpredictor/', ppgpredictor, name='ppgpredictor'),
-
     path('nbaplayersprediction/', nbaplayersprediction, name ='nbaplayersprediction'),
+
+    path('simulationgame/', simulationgame, name='simulationgame'),
+    path('simulationgame/newleague/', newleague, name='newleague'),
+    path('simulationgame/draft/', draft, name='draft'),
+
+    path('simulationgame/viewleague/<int:league_pk>', viewleague, name = 'viewleague'),
+    path('simulationgame/viewteam/<int:team_pk>', viewteam, name='viewteam'),
+
 
 
 

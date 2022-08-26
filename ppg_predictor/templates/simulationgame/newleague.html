@@ -1,0 +1,36 @@
+{% extends 'ppg_predictor/base.html' %}
+{% block content %}
+
+<h1>New League</h1>
+
+<br>
+<br>
+<p>
+
+<form method = 'POST'>
+    
+
+{% csrf_token %}
+League Name <input type="text" name = 'leaguename'>
+<br>
+<br>
+Team Name <input type="text" name = 'teamname' length="4">
+<br>
+<br>
+Number of Teams
+<select name = "numberteams">
+    <option value = "2"selected="selected">2</option>
+    <option value = "4">4</option>
+    <option value = "6">6</option>
+    <option value = "8">8</option>
+</select>
+
+<br>
+<br>
+
+<button type="submit">Start League!</button>
+</form>
+</p>
+
+
+{% endblock %}

@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ppg_predictor',
     'django_extensions',
-    'rest_framework',
 ]
 
 MIDDLEWARE = [

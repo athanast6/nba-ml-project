@@ -1,0 +1,23 @@
+{% extends 'ppg_predictor/base.html' %}
+{% block content %}
+
+<h1> View Team </h1>
+
+<br>
+<br>
+{{ team.teamname }}
+<br>
+<br>
+{{ team.season }}
+<br>
+<br>
+{% for player in teamplayers %}
+<p><b> {{ player }} </b>    {{ player.salary }}        {{ player.ppg2022 }}         {{ player.predictedppg }}</p>  
+{% endfor %}
+
+<br>
+
+<br>
+<br>
+
+{% endblock %}

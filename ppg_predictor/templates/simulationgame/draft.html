@@ -1,0 +1,22 @@
+{% extends 'ppg_predictor/base.html' %}
+{% block content %}
+
+
+<h1>Draft</h1>
+<br>
+{{ error }}
+<br>
+<br>
+<form method = 'POST'>
+    
+
+{% csrf_token %}
+Player Name <input type="text" name = 'playername'>
+<br>
+<br>
+        
+<button type="submit">Draft Player</button>
+</form>
+
+
+{% endblock %}

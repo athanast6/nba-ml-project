@@ -1,0 +1,27 @@
+{% extends 'ppg_predictor/base.html' %}
+{% block content %}
+
+
+<h1>View League</h1>
+
+{{ error }}
+
+<h2>{{ league.leaguename }}</h2>
+<br>
+<br>
+{% for season in seasons %}
+<h3>{{ season }}</h3>
+
+<br>
+<br>
+{% for team in teams %}
+<h4><a href = "{% url 'viewteam' team.id %}"> {{ team }} </a></h4>
+{% endfor %}
+<br>
+<br>
+{% endfor %}
+
+<a href="{% url 'draft' %}">Begin Draft</a>
+
+
+{% endblock %}

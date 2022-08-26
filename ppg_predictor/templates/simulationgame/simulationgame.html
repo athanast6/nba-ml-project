@@ -1,0 +1,26 @@
+{% extends 'ppg_predictor/base.html' %}
+{% block content %}
+
+<h1>Simulation Game</h1>
+
+<a href = "{% url 'newleague' %}">
+    <p>Begin New League</p>
+</a>
+
+
+<br>
+<br>
+<h2>Current Leagues</h2>
+<br>
+<ul>
+    {% for league in leagues %}
+        <li>
+        <a href="{% url 'viewleague' league.id %}">{{ league.leaguename }}</a>
+        </li>
+    {% endfor %}
+</ul>   
+<br> 
+
+
+
+{% endblock %}
